@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #00416A, #E4E5E6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+}
+
+.display {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    min-height: 30px;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+button[data-action="operator"] {
+    background-color: rgba(255, 165, 0, 0.75);
+    color: white;
+}
+
+button[data-action="operator"]:hover {
+    background-color: rgba(255, 165, 0, 0.9);
+}
+
+.clear {
+    background-color: rgba(255, 99, 71, 0.75) !important;
+    color: white;
+}
+
+.clear:hover {
+    background-color: rgba(255, 99, 71, 0.9) !important;
+}
+
+.equals {
+    background-color: rgba(50, 205, 50, 0.75) !important;
+    color: white;
+}
+
+.equals:hover {
+    background-color: rgba(50, 205, 50, 0.9) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .calculator {
+        margin: 10px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    .current-operand {
+        font-size: 2rem;
+    }
+
+    .previous-operand {
+        font-size: 1.2rem;
+    }
+} 

@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "Luxury Timepiece",
+        "price": 1250,
+        "originalPrice": 1500,
+        "onSale": true,
+        "rating": 4.5,
+        "image": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 2,
+        "name": "Designer Handbag",
+        "price": 2800,
+        "rating": 5,
+        "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 3,
+        "name": "Gold Necklace",
+        "price": 1950,
+        "rating": 4,
+        "image": "https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 4,
+        "name": "Leather Shoes",
+        "price": 850,
+        "image": "https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 5,
+        "name": "Designer Sunglasses",
+        "price": 650,
+        "image": "https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 6,
+        "name": "Exclusive Perfume",
+        "price": 450,
+        "image": "https://images.pexels.com/photos/3641363/pexels-photo-3641363.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+] 

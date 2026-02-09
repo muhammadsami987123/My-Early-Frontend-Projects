@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@sanity/client": "^6.25.0",
+    "axios": "^1.7.9"
+  }
+}

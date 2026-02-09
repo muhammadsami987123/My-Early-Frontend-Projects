@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "lint": "^0.8.19",
+    "lucide-react": "^0.479.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "vercel": "^41.3.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.12"
+  }
+}

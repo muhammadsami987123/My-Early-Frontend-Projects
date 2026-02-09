@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-container {
+            transition: transform 0.3s ease;
+        }
+        .thumbnail {
+            transition: all 0.3s ease;
+        }
+        .thumbnail.active {
+            border-color: rgb(59, 130, 246);
+            opacity: 1;
+        }
+        .thumbnail:not(.active) {
+            opacity: 0.6;
+        }
+        /* Add smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom animation for navbar items */
+        .nav-item {
+            position: relative;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s;
+        }
+        .nav-item:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-600 to-purple-700 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-black/30 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Brand -->
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-camera text-white text-2xl"></i>
+                    <span class="text-white font-bold text-xl">Pixel Perfect</span>
+                </div>
+                
+                <!-- Menu Items -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-blue-300 nav-item">Home</a>
+                    <a href="#gallery" class="text-white hover:text-blue-300 nav-item">Gallery</a>
+                    <a href="#about" class="text-white hover:text-blue-300 nav-item">About</a>
+                    <a href="#contact" class="text-white hover:text-blue-300 nav-item">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-white" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobileMenu">
+                <div class="flex flex-col space-y-3 py-3">
+                    <a href="#home" class="text-white hover:text-blue-300 py-1">Home</a>
+                    <a href="#gallery" class="text-white hover:text-blue-300 py-1">Gallery</a>
+                    <a href="#about" class="text-white hover:text-blue-300 py-1">About</a>
+                    <a href="#contact" class="text-white hover:text-blue-300 py-1">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="max-w-6xl mx-auto my-8 px-4 text-center">
+        <h1 class="text-5xl font-bold text-white mb-3">Modern Image Gallery</h1>
+        <p class="text-xl text-white/80 max-w-3xl mx-auto">Explore beautiful images with smooth navigation and interactive features. Click on thumbnails or use arrow keys to browse.</p>
+        <div class="mt-6 flex justify-center">
+            <a href="#gallery" class="bg-white/20 hover:bg-white/30 text-white font-bold py-2 px-6 rounded-full transition-all inline-flex items-center">
+                Explore Gallery
+                <i class="fas fa-arrow-down ml-2 animate-bounce"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Gallery Container -->
+    <main id="gallery" class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden my-8 px-4">
+        <!-- Gallery Viewer -->
+        <div class="relative">
+            <!-- Main Image Display -->
+            <div class="main-image-container h-[500px] relative">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Featured image" id="mainImage" 
+                    class="w-full h-full object-contain">
+                
+                <!-- Navigation Arrows -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                
+                <!-- Fullscreen Hint -->
+                <div class="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-lg text-sm opacity-75">
+                    <i class="fas fa-expand mr-1"></i> Click image for fullscreen
+                </div>
+            </div>
+
+            <!-- Image Caption/Info -->
+            <div class="p-6 bg-black/40 text-white">
+                <h2 id="imageTitle" class="text-2xl font-semibold">Beautiful Landscape</h2>
+                <p id="imageDescription" class="text-md opacity-90 mt-2">A stunning view of mountains and lakes</p>
+            </div>
+        </div>
+
+        <!-- Thumbnails Navigation -->
+        <div class="p-6 bg-black/60">
+            <h3 class="text-white text-lg mb-3 font-medium">Browse Gallery</h3>
+            <div class="thumbnails-container flex overflow-x-auto gap-3 pb-3">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Thumbnail 1" class="thumbnail h-24 w-24 object-cover rounded-lg cursor-pointer border-2 border-transparent active shadow-lg" data-title="Beautiful Landscape" data-description="A stunning view of mountains and lakes">
+                
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Thumbnail 2" class="thumbnail h-24 w-24 object-cover rounded-lg cursor-pointer border-2 border-transparent shadow-lg" data-title="Ocean Sunset" data-description="Colorful sunset over the ocean horizon">
+                
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d" alt="Thumbnail 3" class="thumbnail h-24 w-24 object-cover rounded-lg cursor-pointer border-2 border-transparent shadow-lg" data-title="Forest Path" data-description="A serene path through a dense forest">
+                
+                <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a" alt="Thumbnail 4" class="thumbnail h-24 w-24 object-cover rounded-lg cursor-pointer border-2 border-transparent shadow-lg" data-title="Desert Dunes" data-description="Golden sand dunes in a vast desert">
+                
+                <img src="https://freerangestock.com/sample/175174/modern-city-skyline-with-tall-buildings-against-blue-sky..jpg" alt="Thumbnail 5" class="thumbnail h-24 w-24 object-cover rounded-lg cursor-pointer border-2 border-transparent shadow-lg" data-title="City Skyline" data-description="Modern city skyline with tall skyscrapers">
+                    
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Thumbnail 6" class="thumbnail h-24 w-24 object-cover rounded-lg cursor-pointer border-2 border-transparent shadow-lg" data-title="Mountain Range" data-description="Majestic mountain range under a clear blue sky">
+            
+            </div>
+            <p class="text-white/60 text-sm mt-3">
+                <i class="fas fa-keyboard mr-1"></i> Pro tip: Use keyboard arrow keys to navigate through images
+            </p>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden my-8 p-8">
+        <h2 class="text-3xl font-bold text-white mb-4">About This Gallery</h2>
+        <p class="text-white/90 mb-4">This modern image gallery showcases beautiful photography with a sleek, responsive design. Built with HTML, Tailwind CSS, and JavaScript, it features smooth transitions, keyboard navigation, touch support, and more.</p>
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-white/20 p-6 rounded-xl">
+                <i class="fas fa-mobile-alt text-white text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Responsive Design</h3>
+                <p class="text-white/80">Looks great on all devices, from mobile phones to desktop computers.</p>
+            </div>
+            <div class="bg-white/20 p-6 rounded-xl">
+                <i class="fas fa-keyboard text-white text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Keyboard Navigation</h3>
+                <p class="text-white/80">Use arrow keys to navigate between images for a seamless experience.</p>
+            </div>
+            <div class="bg-white/20 p-6 rounded-xl">
+                <i class="fas fa-expand text-white text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Fullscreen View</h3>
+                <p class="text-white/80">Click on any image to view it in fullscreen mode with enhanced details.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-6xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden my-8 p-8">
+        <h2 class="text-3xl font-bold text-white mb-4">Contact Us</h2>
+        <p class="text-white/90 mb-6">Have questions about the gallery or want to submit your own photos? Get in touch!</p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-white mb-2" for="name">Your Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:border-blue-400">
+                    </div>
+                    <div>
+                        <label class="block text-white mb-2" for="email">Email Address</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:border-blue-400">
+                    </div>
+                    <div>
+                        <label class="block text-white mb-2" for="message">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:border-blue-400"></textarea>
+                    </div>
+                    <button type="button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="text-white">
+                <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-300 text-xl w-8"></i>
+                        <span>123 Gallery Street, Art City, AC 12345</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-300 text-xl w-8"></i>
+                        <span>info@pixelperfect.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-300 text-xl w-8"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61560759232353" class="text-white hover:text-blue-300 transition-colors">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="https://x.com/MSAMIWASEEM1" class="text-white hover:text-blue-300 transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/muhammad_sami3344/" class="text-white hover:text-blue-300 transition-colors">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-sami-3aa6102b8/" class="text-white hover:text-blue-300 transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/70 text-white mt-auto">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-camera text-blue-400 text-2xl"></i>
+                        <span class="text-white font-bold text-xl">Pixel Perfect</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">A modern image gallery showcasing beautiful photography with interactive features and smooth navigation.</p>
+                    <p class="text-gray-400">&copy; 2025 Pixel Perfect Gallery. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-blue-300">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-blue-300">Newsletter</h3>
+                    <p class="text-gray-300 mb-3">Subscribe to receive updates on new gallery additions.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none">
+                        <button class="bg-blue-500 hover:bg-blue-600 px-3 py-2 text-white rounded-r-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Sami - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl sm:text-2xl font-bold text-emerald-600">Muhammad Sami</div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-4 lg:space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-emerald-500 transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-emerald-500 transition">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-emerald-500 transition">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-emerald-500 transition">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu Panel -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-600 hover:text-emerald-500 transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-emerald-500 transition">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-emerald-500 transition">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-emerald-500 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative overflow-hidden bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute w-96 h-96 bg-white/10 rounded-full -top-20 -left-20 blur-3xl"></div>
+            <div class="absolute w-96 h-96 bg-emerald-500/10 rounded-full -bottom-20 -right-20 blur-3xl"></div>
+        </div>
+
+        <!-- Main content -->
+        <div class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-20">
+            <div class="text-center w-full max-w-4xl mx-auto">
+                <div class="mb-6 inline-block">
+                    <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-white/10 text-white backdrop-blur-sm border border-white/20">
+                        Available for Freelance Work
+                    </span>
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 text-white">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Muhammad Sami</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 text-gray-100 max-w-2xl mx-auto px-4">
+                    Web Developer | Full Stack Development | AI Enthusiast
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+                    <a href="#contact" 
+                       class="group relative px-8 py-4 w-64 md:w-auto bg-white rounded-full text-emerald-600 font-medium 
+                              hover:shadow-xl hover:shadow-white/20 transition-all duration-300 
+                              hover:scale-105 active:scale-100">
+                        <span class="flex items-center justify-center gap-2">
+                            Get in Touch
+                            <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="resume.pdf" 
+                       class="group relative px-8 py-4 w-64 md:w-auto rounded-full font-medium
+                              border-2 border-white text-white
+                              hover:bg-white/10 backdrop-blur-sm
+                              transition-all duration-300
+                              hover:scale-105 active:scale-100">
+                        <span class="flex items-center justify-center gap-2">
+                            Download Resume
+                            <i class="fas fa-download transition-transform group-hover:translate-y-0.5"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-16 flex items-center justify-center gap-6">
+                    <a href="https://github.com/muhammadsami987123" class="text-white/80 hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-sami-3aa6102b8/" class="text-white/80 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://x.com/MSAMIWASEEM1" class="text-white/80 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white/80 hover:text-white transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4">
+                    <p class="text-gray-600 space-y-4">
+                        <div class="font-semibold text-xl mb-2">Muhammad Sami</div>
+                        <div class="text-emerald-600 font-medium mb-4">Web Developer | Full Stack Development | AI Enthusiast</div>
+                        
+                        <div class="space-y-4">
+                            <p>
+                                I'm a passionate web developer based in Karachi, Sindh, with expertise in building live projects, including e-commerce platforms. I specialize in modern web technologies like Next.js, Tailwind CSS, Sanity, Stripe, and ShipEngine, and I have experience working with Python, HTML, CSS, JavaScript, and TypeScript.
+                            </p>
+                            
+                            <p>
+                                Currently, I am advancing my skills in AI and Full Stack Development through programs at GIAIC and PIAIC, with a focus on Next.js and Python. I aim to stay up-to-date with the latest technologies, consistently improving my skills to tackle real-world challenges.
+                            </p>
+                            
+                            <p>
+                                Alongside my technical work, I am also committed to enhancing my communication skills, particularly in English, to present my ideas effectively. When I'm not coding, I enjoy reading Urdu afsanas and testing and deploying new websites as part of my personal growth in the tech field.
+                            </p>
+                        </div>
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="fab fa-html5 text-2xl text-orange-500"></i>
+                            <span>HTML5/CSS3</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fab fa-js text-2xl text-yellow-500"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fab fa-react text-2xl text-blue-400"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fab fa-node text-2xl text-green-500"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="nextjs.svg" class="w-6 h-6 text-purple-500"/>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fab fa-git-alt text-2xl text-orange-600"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="tailwind.svg" class="w-6 h-6 text-purple-500"/>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="profile.png" alt="Muhammad Sami" 
+                         class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 sm:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">My Projects</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- E-commerce Project -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="project1.PNG" alt="E-commerce Platform" 
+                         class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl font-bold mb-2">Furniture E-commerce</h3>
+                        <p class="text-gray-600 mb-4">
+                            A full-stack e-commerce solution featuring user authentication,
+                            product management, and Stripe payment integration.
+                            Built with React, Node.js, and MongoDB.
+                        </p>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://hackthone-two.vercel.app/" 
+                               class="text-emerald-500 hover:text-emerald-600">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="project2.PNG" alt="E-commerce Platform" 
+                         class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl font-bold mb-2">Electronic E-Commerce</h3>
+                        <p class="text-gray-600 mb-4">
+                            A full-stack e-commerce solution featuring user authentication,
+                            product management, and Stripe payment integration.
+                            Built with React, Node.js, and MongoDB.
+                        </p>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://e-commerce--exclusive.vercel.app/" 
+                               class="text-emerald-500 hover:text-emerald-600">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="project3.PNG" alt="Blod Platform" 
+                         class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl font-bold mb-2">Blog Website</h3>
+                        <p class="text-gray-600 mb-4">
+                            A full-stack e-commerce solution featuring user authentication,
+                            product management, and Stripe payment integration.
+                            Built with React, Node.js, and MongoDB.
+                        </p>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://blogwebsite-gray.vercel.app/" 
+                               class="text-emerald-500 hover:text-emerald-600">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="project4.PNG" alt="Blod Platform" 
+                         class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl font-bold mb-2">Pane Cloud</h3>
+                        <p class="text-gray-600 mb-4">
+                            A full-stack e-commerce solution featuring user authentication,
+                            product management, and Stripe payment integration.
+                            Built with React, Node.js, and MongoDB.
+                        </p>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://paneclounds.vercel.app/" 
+                               class="text-emerald-500 hover:text-emerald-600">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="project5.PNG" alt="TaskMaster Pro" 
+                         class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl font-bold mb-2">TaskMaster Pro</h3>
+                        <p class="text-gray-600 mb-4">
+                            A full-stack e-commerce solution featuring user authentication,
+                            product management, and Stripe payment integration.
+                            Built with React, Node.js, and MongoDB.
+                        </p>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://todo-app2-rho.vercel.app/" 
+                               class="text-emerald-500 hover:text-emerald-600">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="project6.PNG" alt="TaskMaster Pro" 
+                         class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl font-bold mb-2">Resme Builder</h3>
+                        <p class="text-gray-600 mb-4">
+                            A full-stack e-commerce solution featuring user authentication,
+                            product management, and Stripe payment integration.
+                            Built with React, Node.js, and MongoDB.
+                        </p>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://resme-builder-milestone-05.vercel.app/" 
+                               class="text-emerald-500 hover:text-emerald-600">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 sm:py-20 bg-gradient-to-br from-emerald-50 via-white to-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="max-w-5xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                        Let's Build Something Amazing Together
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Have a project in mind? Let's discuss how we can help bring your ideas to life.
+                    </p>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Contact Info -->
+                    <div class="md:col-span-1 bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-emerald-100 rounded-full p-3">
+                                    <i class="fas fa-envelope text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Email</p>
+                                    <a href="mailto:contact@example.com" class="text-gray-700 hover:text-emerald-600 transition-colors">
+                                        m.samiwaseem1234@example.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-emerald-100 rounded-full p-3">
+                                    <i class="fas fa-phone text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Phone</p>
+                                    <a href="tel:+1234567890" class="text-gray-700 hover:text-emerald-600 transition-colors">
+                                        +92102256203
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-emerald-100 rounded-full p-3">
+                                    <i class="fas fa-location-dot text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Location</p>
+                                    <p class="text-gray-700">Karachi , Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="mt-10">
+                            <p class="text-sm text-gray-500 mb-4">Connect with me</p>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/muhammad-sami-3aa6102b8/" class="bg-gray-100 hover:bg-emerald-100 p-3 rounded-full transition-colors">
+                                    <i class="fab fa-linkedin-in text-gray-600 hover:text-emerald-600"></i>
+                                </a>
+                                <a href="https://github.com/muhammadsami987123" class="bg-gray-100 hover:bg-emerald-100 p-3 rounded-full transition-colors">
+                                    <i class="fab fa-github text-gray-600 hover:text-emerald-600"></i>
+                                </a>
+                                <a href="https://x.com/MSAMIWASEEM1" class="bg-gray-100 hover:bg-emerald-100 p-3 rounded-full transition-colors">
+                                    <i class="fab fa-twitter text-gray-600 hover:text-emerald-600"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="md:col-span-2 bg-white rounded-2xl shadow-lg p-8">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="relative">
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full bg-gray-50 px-4 py-3 rounded-lg text-gray-700 border border-gray-200 
+                                        focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                                        transition-all duration-200"
+                                        placeholder="Your Name">
+                                </div>
+                                <div class="relative">
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full bg-gray-50 px-4 py-3 rounded-lg text-gray-700 border border-gray-200 
+                                        focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                                        transition-all duration-200"
+                                        placeholder="Your Email">
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <input type="text" id="subject" name="subject" required
+                                    class="w-full bg-gray-50 px-4 py-3 rounded-lg text-gray-700 border border-gray-200 
+                                    focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                                    transition-all duration-200"
+                                    placeholder="Subject">
+                            </div>
+
+                            <div class="relative">
+                                <textarea id="message" name="message" rows="6" required
+                                    class="w-full bg-gray-50 px-4 py-3 rounded-lg text-gray-700 border border-gray-200 
+                                    focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                                    transition-all duration-200 resize-none"
+                                    placeholder="Your Message"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-4 px-6 rounded-lg
+                                hover:from-emerald-600 hover:to-teal-700 transform hover:scale-[1.02] 
+                                transition-all duration-300 shadow-md hover:shadow-lg
+                                focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                                <div class="flex items-center justify-center space-x-2">
+                                    <span class="font-medium">Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <!-- Main Footer -->
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand Section -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-emerald-500 mb-4">Muhammad Sami</h3>
+                    <p class="text-gray-400 mb-4">Crafting exceptional digital experiences with modern web technologies</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.linkedin.com/in/muhammad-sami-3aa6102b8/" 
+                           class="bg-gray-800 hover:bg-emerald-600 p-2 rounded-full transition-all duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/muhammadsami987123" 
+                           class="bg-gray-800 hover:bg-emerald-600 p-2 rounded-full transition-all duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://x.com/MSAMIWASEEM1" 
+                           class="bg-gray-800 hover:bg-emerald-600 p-2 rounded-full transition-all duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-emerald-500 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-emerald-500 transition-colors">About</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-emerald-500 transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-emerald-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center justify-center md:justify-start text-gray-400">
+                            <i class="fas fa-envelope mr-2 text-emerald-500"></i>
+                            m.samiwaseem1234@example.com
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start text-gray-400">
+                            <i class="fas fa-phone mr-2 text-emerald-500"></i>
+                            +92102256203
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start text-gray-400">
+                            <i class="fas fa-location-dot mr-2 text-emerald-500"></i>
+                            Karachi, Pakistan
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 Muhammad Sami. All rights reserved.
+                    </p>
+                    <div class="mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-emerald-500 text-sm mx-3 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-500 text-sm mx-3 transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

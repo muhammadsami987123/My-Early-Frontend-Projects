@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f49b;
+    color: black;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+/* header styles */
+.header {
+   background-color: #0070f3;
+   color: white;
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header .logo {
+    font-size: 30px;
+    color: white;
+}
+
+
+
+.header nav {
+    display: flex;
+    gap: 40px;
+}
+
+.header nav a {
+    color: white;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/*footer stytes */
+
+footer {
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+
+footer p {
+    margin: 0;
+}
+
+/* hero styles */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:top;
+    text-align: center;
+    color: white;
+    
+    padding-left: 60px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    padding-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font: weight 100px;
+}
+
+.hero button {
+    margin-top: 100px;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.hero button:hover {
+    background-color: blue;
+}
+
+
+/* about styles */
+
+.about {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+
+}
+
+
+.about-content {
+    max-width: 600px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px; 
+}
+
+
+.about-content p {
+    padding-top: 20px;
+}
+
+
+/* cars styles */
+
+.cars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+    margin-top: 20px;
+    margin: 20px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxHtgBggHUaqDKHqAwqIAnxYjHa9P75SaqYQ&s);
+}
+
+.car-card {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.car-card h3 {
+    margin-top: 10px;
+    font-weight: bold;
+
+
+}
+
+.car-card p {
+    color: black;
+    font-size: 15px;
+    height: auto;
+}
+
+.car-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.car-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color:#0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.car-card button:hover{
+    background-color: blue ;
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+}
+
+
+.car-card:hover img{
+  transform: scale(1.1);
+}
+
+
+/* contact page */
+
+
+.form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* .backgound {
+    background-image: cover;
+    background-position: center;
+    background-size: cover;
+} */
+
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc ;
+    border-radius: 5px;
+}
+ 
+
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc ;
+    border-radius: 5px;
+}
+
+
+.form button {
+    padding: 10px 20px;
+    width: 100%;
+    background-color:#0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: blue;
+}
+
+
+/* responsive styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+
+    }
+
+    .header nav {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .hero{
+        height: 70vh;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero button {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .cars {
+        grid-template-columns: 1fr;
+        margin: 20px;
+
+    }
+
+    .about {
+        padding: 40px 20px;
+        height: auto;
+
+    }
+
+    .about-content{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form {
+        margin: 20px;
+        padding: 20px;
+    }
+}

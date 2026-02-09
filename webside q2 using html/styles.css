@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-contact {
+    font-size: 0.9em;
+}
+
+.logo img {
+    max-width: 80px;
+    padding: 1px;
+}
+
+/* Banner Section */
+.banner {
+    background: #72c02c url('banner-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.banner h1 {
+    font-size: 3em;
+}
+
+.banner p {
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Advantages Section */
+.advantages {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.advantages h2 {
+    margin-bottom: 20px;
+}
+
+.advantage-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.advantage-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-us h2 {
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Process Section */
+.process {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.process h2 {
+    margin-bottom: 20px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+}
+
+.process-step {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills h2 {
+    margin-bottom: 20px;
+}
+
+.skills-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #72c02c;
+    margin-top: 10px;
+}
+
+/* Start Project Section */
+.start-project {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.start-project h2 {
+    margin-bottom: 20px;
+}
+
+.start-project form input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.start-project form button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contacts {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.portfolio p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    margin: 20px;
+    width: 280px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    color: #666;
+}

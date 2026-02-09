@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium E-Commerce Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Add meta description for SEO -->
+    <meta name="description" content="LuxuryMart - Premium products curated for the modern connoisseur. Experience luxury redefined.">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-gray-800">LuxuryMart</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="main.html" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+                    <a href="shop.html" class="text-gray-600 hover:text-gray-900 font-medium">Shop</a>
+                    <a href="checkout.html" class="text-gray-600 hover:text-gray-900 font-medium">Checkout</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">About</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="cart.html" class="p-2 text-gray-600 hover:text-gray-900 relative">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1"></span>
+                    </a>
+                    <button class="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Enhanced with overlay and button styling -->
+    <section class="relative bg-gray-900">
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-70"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-bold text-white mb-6 leading-tight">Elevate Your Lifestyle</h1>
+                <p class="text-xl text-gray-300 mb-8">Discover premium products curated for the modern connoisseur. Experience luxury redefined.</p>
+                <a href="shop.html" class="inline-block bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Explore Collection
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products - Add section title styling -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Featured Collections</h2>
+            <div class="w-24 h-1 bg-black mx-auto"></div>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Handpicked premium products that define elegance and sophistication</p>
+        </div>
+        <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+        <div class="text-center mt-12">
+            <a href="shop.html" class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                View All Products
+            </a>
+        </div>
+    </section>
+
+    <!-- Add Testimonials Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Our Customers Say</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The quality of products from LuxuryMart exceeds all expectations. Their attention to detail is impeccable."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Shopping at LuxuryMart has been a game-changer. Their customer service is as premium as their products."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I've never experienced such luxury in online shopping. Every purchase feels special and exclusive."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Emma Rodriguez</h4>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Newsletter Section with better styling -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Exclusive Circle</h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for early access to new collections, special offers, and curated content.</p>
+            <form class="flex max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow p-3 rounded-l-lg text-black focus:outline-none focus:ring-2 focus:ring-white">
+                <button type="submit" class="bg-white text-black px-6 py-3 rounded-r-lg font-medium hover:bg-gray-200 transition-colors">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-4">LuxuryMart</h3>
+                <p class="text-gray-400">Redefining luxury shopping experience since 2023.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Customer Service</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Shipping Information</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Newsletter</h4>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" class="p-2 rounded-l-md text-black">
+                    <button type="submit" class="bg-white text-black px-4 rounded-r-md hover:bg-gray-100">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            © 2023 LuxuryMart. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize cart if it doesn't exist
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', JSON.stringify([]));
+        }
+
+        // Function to add item to cart with animation
+        function addToCart(productName, price, imageUrl) {
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            cart.push({ 
+                name: productName, 
+                price: price,
+                image: imageUrl
+            });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Create a visual confirmation element
+            const confirmation = document.createElement('div');
+            confirmation.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out';
+            confirmation.textContent = `${productName} added to cart!`;
+            document.body.appendChild(confirmation);
+
+            // Animate the confirmation
+            setTimeout(() => {
+                confirmation.style.transform = 'translateY(0)';
+            }, 10);
+
+            // Remove the confirmation after animation
+            setTimeout(() => {
+                confirmation.style.opacity = '0';
+                setTimeout(() => {
+                    confirmation.remove();
+                }, 500);
+            }, 2000);
+
+            // Update cart count
+            updateCartCount();
+        }
+
+        // Function to update cart count
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = document.getElementById('cart-count');
+            cartCount.textContent = cart.length;
+        }
+
+        // Function to load products - Enhanced with loading state
+        async function loadProducts() {
+            try {
+                const container = document.getElementById('products-container');
+                
+                // Add loading state
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-black"></div>
+                        <p class="mt-2 text-gray-600">Loading products...</p>
+                    </div>
+                `;
+                
+                const response = await fetch('products.json');
+                const products = await response.json();
+                
+                // Clear loading state
+                container.innerHTML = '';
+                
+                products.forEach(product => {
+                    const productCard = `
+                        <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden relative transform hover:scale-105 transition-transform">
+                            ${product.onSale ? '<div class="product-badge">Sale</div>' : ''}
+                            ${product.new ? '<div class="product-badge new-badge">New</div>' : ''}
+                            <div class="overflow-hidden">
+                                <img src="${product.image}" alt="${product.name}" class="product-image w-full h-64 object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
+                                <div class="flex items-center justify-between">
+                                    <p class="product-price text-gray-800 mb-4">
+                                        $${product.price.toFixed(2)}
+                                        ${product.originalPrice ? 
+                                            `<span class="text-sm text-gray-400 line-through ml-2">$${product.originalPrice.toFixed(2)}</span>` 
+                                            : ''
+                                        }
+                                    </p>
+                                    ${product.rating ? `
+                                        <div class="flex items-center space-x-1">
+                                            <span class="text-yellow-400">${'★'.repeat(Math.round(product.rating))}</span>
+                                            <span class="text-gray-400">${'★'.repeat(5 - Math.round(product.rating))}</span>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                                <button onclick="addToCart('${product.name}', ${product.price}, '${product.image}')" 
+                                        class="add-to-cart-btn w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += productCard;
+                });
+            } catch (error) {
+                console.error('Error loading products:', error);
+                const container = document.getElementById('products-container');
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <p class="text-red-500">Failed to load products. Please try again later.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Update cart count when page loads
+        updateCartCount();
+
+        // Load products when page loads
+        loadProducts();
+
+        // Add click animation to buttons
+        document.addEventListener('click', function(e) {
+            if (e.target && e.target.matches('button[onclick*="addToCart"]')) {
+                const button = e.target;
+                
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                button.appendChild(ripple);
+                
+                // Remove ripple after animation
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+        });
+    </script>
+
+    <style>
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Button click effect */
+        button[onclick*="addToCart"] {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        button[onclick*="addToCart"]:active {
+            transform: scale(0.95);
+        }
+
+        /* Confirmation animation */
+        .fixed {
+            transform: translateY(100%);
+            opacity: 1;
+        }
+
+        /* Enhanced product card styling */
+        .product-card {
+            transition: all 0.3s ease;
+            perspective: 1000px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 59, 48, 0.9);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .new-badge {
+            background: rgba(0, 122, 255, 0.9);
+            left: 1rem;
+            right: auto;
+        }
+
+        .product-price {
+            color: #1a1a1a;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .product-card:hover .product-price {
+            color: #000;
+        }
+
+        .add-to-cart-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Improved animations */
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Add animation for confirmation message */
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .fixed {
+            animation: slideIn 0.3s forwards;
+        }
+    </style>
+</body>
+</html>
+
+
+
+
